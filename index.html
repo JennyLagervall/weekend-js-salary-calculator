@@ -28,11 +28,11 @@
                   type="number">
                   <input id = "title-input"
                   placeholder="Title"
-                  type="number">
+                  type="text">
                   <input id = "salary-input"
                   placeholder="Annual Salary"
                   type="number">
-                <button id="submit-button" onClick="grabFormValue(event)">Submit</button>
+                <button id="submit-button" onClick="grabValue(event)">Submit</button>
               </form>
           </div>
         </section>
@@ -50,15 +50,18 @@
                 <th> </th>
               </tr>
             </thead>
-            <tbody>
-                <tr id="table-add">
-                </tr>
+            <tbody id = "table-add">
+             
+                
             </tbody>
           </table>
         </section>
       </main>
-    
+
       <footer>
+        <section>
+            <h3>Total Montly Salary:</h3>
+        </section>
       </footer>  
 </body>
 </html>
