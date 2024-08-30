@@ -14,7 +14,7 @@
 
       <main>
         <section>
-          <div id = "form-div">
+          <div id = "form-container">
             <h3>Add employee</h3>
             <form id = "form-id">
                 <input id = "first-name-input"
@@ -32,21 +32,27 @@
                   <input id = "salary-input"
                   placeholder="Annual Salary"
                   type="number">
-                <button id="submit-button" onClick="grabValue(event)">Submit</button>
+                <button id="submit-button" onClick="grabFormValue(event)">Submit</button>
               </form>
           </div>
         </section>
 
-        <section>
-          <h3>Add employee</h3>
+        <section class ="table-container">
+          <h3>Employees</h3>
           <table>
             <thead>
               <tr>
-                <th></th>
-                <th></th>
+                <th> First Name </th>
+                <th> Last Name</th>
+                <th> ID Number</th>
+                <th> Title</th>
+                <th> Annual Salary</th>
+                <th> </th>
               </tr>
             </thead>
             <tbody>
+                <tr id="table-add">
+                </tr>
             </tbody>
           </table>
         </section>
