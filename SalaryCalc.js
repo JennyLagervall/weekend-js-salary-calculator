@@ -9,18 +9,32 @@ function grabValue(event){
     const salaryInput = document.getElementById('salary-input').value;
     
     const tradd = document.getElementById("table-add");
-    const tdata = document.createElement('tr');
-    tradd.appendChild(tdata);
+    const tabledata = document.createElement('tr');
+    tabledata.classList.add('newTr');
+    tradd.appendChild(tabledata);
     
-   tdata.innerHTML = 
+   tabledata.innerHTML = 
    `  <td>${firstNameInput}</td>
       <td>${lastNameInput}</td>
       <td>${idInput}</td>
       <td>${titleInput}</td>
-      <td>${salaryInput}</td> `
+      <td>${salaryInput}</td> 
+      <td><button onClick="deleteValue(event)">delete</button></td>
+      `
       
 }
 
+
+// function salaryCal (){
+ 
+    
+
+//     const footAppend = document.getElementById("table-add");
+//     const tdata = document.createElement('tr');
+//     tradd.appendChild(tdata);
+    
+//    tdata.innerHTML = 
+// }
 
 
 
@@ -37,7 +51,7 @@ function grabValue(event){
 
 
 function deleteValue(event){
-
+    event.target.closest('.newTr').remove()
 }
 
 
