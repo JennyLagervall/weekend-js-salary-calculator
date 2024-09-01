@@ -17,11 +17,8 @@ function grabValue(event){
        salSum += monthlySalary[i];}
 
 
-       let monthSum = salSum/ months;
-
-    console.log(monthSum);
-
-
+       let monthSum1 = salSum/ months;
+       let monthSum = monthSum1.toFixed(2);
 
 
     const tradd = document.getElementById("table-add");
@@ -37,7 +34,14 @@ function grabValue(event){
       <td>${salaryInput}</td> 
       <td><button onClick="deleteValue(event)">delete</button></td>
       `
+
+    const pAdd = document.getElementById("hThree");
+    const pData = document.createElement('p');
+    pAdd.appendChild(pData);
+    pData.innerText = `Total Salary per Month: $ ${monthSum}`;
 }
+
+
   
 
 
