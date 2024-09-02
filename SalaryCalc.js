@@ -8,7 +8,7 @@ function grabValue(event){
     const idInput = document.getElementById('id-input').value;
     const titleInput = document.getElementById('title-input').value;
     const salaryInput = Number(document.getElementById('salary-input').value);
-    
+    const formatSalInput = new Intl.NumberFormat("en-US").format(salaryInput);
 
     monthlySalary.push(salaryInput);
     salaryDisplay();
@@ -24,7 +24,7 @@ function grabValue(event){
       <td>${lastNameInput}</td>
       <td>${idInput}</td>
       <td>${titleInput}</td>
-      <td> $${salaryInput} </td> 
+      <td> $${formatSalInput} </td> 
       <td><button id="delete-button" onClick="deleteValue(event)">Delete</button></td>
       `
     
@@ -48,9 +48,13 @@ function salaryDisplay(){
        let monthSum0 = salSum + 75000;
        let monthSum1 = monthSum0/ months;
        let monthSum = monthSum1.toFixed(2);
+       let commas = new Intl.NumberFormat("en-US");
+       let commaNum = commas.format(monthSum); 
+
+
 
        const pAdd = document.getElementById("hThreeTwo");
-       pAdd.innerText = `$${monthSum}`
+       pAdd.innerText = `$${commaNum}`
 
        if (monthSum >= 20000){
         pAdd.style.backgroundColor = "red";
@@ -60,7 +64,7 @@ function salaryDisplay(){
 
 }
 
-// If the total monthly cost exceeds $20,000, add a red background color to the total monthly cost.
+
 
 
 
