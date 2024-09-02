@@ -11,18 +11,8 @@ function grabValue(event){
     
 
     monthlySalary.push(salaryInput);
-
-    let salSum = 0
-    let months = 12
-    for (let i =0; i<monthlySalary.length; i++){
-       salSum += monthlySalary[i];}
-
-
-       let monthSum0 = salSum + 75000;
-       let monthSum1 = monthSum0/ months;
-       let monthSum = monthSum1.toFixed(2);
+    salaryDisplay();
     
-
 
     const tradd = document.getElementById("table-add");
     const tabledata = document.createElement('tr');
@@ -35,37 +25,48 @@ function grabValue(event){
       <td>${idInput}</td>
       <td>${titleInput}</td>
       <td> $${salaryInput} </td> 
-      <td><button onClick="deleteValue(event)">delete</button></td>
+      <td><button id="delete-button" onClick="deleteValue(event)">Delete</button></td>
       `
-
-    const pAdd = document.getElementById("hThree");
-    const pData = document.createElement('p');
-    pAdd.appendChild(pData);
-    pData.innerText = `Total Salary per Month: $${monthSum}`;
+    
+      document.getElementById('first-name-input').value  = '';
+      document.getElementById("last-name-input").value = '';
+      document.getElementById('id-input').value = '';
+      document.getElementById('title-input').value = '';
+      document.getElementById('salary-input').value = '';
 }
+
 
 
   
+function salaryDisplay(){
+    let salSum = 0
+    let months = 12;
+    for (let i =0; i<monthlySalary.length; i++){
+       salSum += monthlySalary[i];
+    }
 
+       let monthSum0 = salSum + 75000;
+       let monthSum1 = monthSum0/ months;
+       let monthSum = monthSum1.toFixed(2);
 
+       const pAdd = document.getElementById("hThreeTwo");
+       pAdd.innerText = `$${monthSum}`
+      
 
+}
 
-
-
-
-
-
-
-
-
-
-
+// If the total monthly cost exceeds $20,000, add a red background color to the total monthly cost.
+// add everyother color to table
+//add table footer
 
 
 function deleteValue(event){
-    event.target.closest('.newTr').remove()
+    let sumsum= 0
+    let months1 =12
+    event.target.closest('tr').remove();
+    monthlySalary.pop();
+   
 }
-
 
 
 

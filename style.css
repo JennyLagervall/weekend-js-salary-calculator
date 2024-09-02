@@ -1,32 +1,107 @@
 body {
-background-color:lavender;
-}
-header{
-font-family: sans-serif;
-font-weight: bold;
-text-transform: capitalize;
-color: #452c63;
-display: flex;
-align-items: flex-end; 
-padding: 20px 15px;
-background-color: #f8f8f8;
-border-bottom: 1px solid #ddd;
-}
+    background-color:lavender;
+    font-family: "Alegreya-Sans";
+    }
+    header{
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #452c63;
+    display: flex;
+    align-items: flex-end; 
+    padding: 20px 15px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    margin-top: -10px;
+    }
+    
+    #logo {
+        position: relative;
+        top: -10px; 
+        height: 60px;
+        width: auto;
+        margin-right: 10px;
+    }
+    
+    
+    #form-container {
+        width: 75%;
+        border: 2px solid #09796f; 
+        padding: 15px;          
+        margin: 15px;  
+        margin-left: 0px
+    }
+    
+    
+    h3 {
+    color: #09796f;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    }
+    #submit-button, #delete-button{
+    background-color: #a3b7ca;
+    border: none;
+    padding:  10px 15px;
+    margin-left: 15px
+    }
+    
+    #submit-button:hover{
+        background-color:#476f95;
+        border: none;
+    }
+    
+    #delete-button:hover {
+        background-color:#476f95;
+        border: none;
+         
+    }
+    input[type="text"], input[type="number"], input[type="password"], textarea {
+        border: 1px solid black;
+        border-radius: 2px; 
+        width: 175px; 
+        height: 25px;
+    }
+    
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 77%; 
+        }
 
-#logo {
-    position: relative;
-    top: -10px; 
-    height: 60px;
-    width: auto;
-    margin-right: 10px;
-}
+        td, th {
+          border: 1px solid #09796f;
+          min-height: 100px;
+          min-width: 100px; 
+          text-align: left;
+          padding: 8px;
+        }
+        
+        #hThree-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           margin-left: 500px;
+           gap: 10px;  
+        }  
+        
+        thead{
+            background-color: #452c63; 
+            color:white; 
+            height: 45px; 
+        }
+        tfoot{
+            background-color: #452c63; 
+            height: 5px;
 
-
-
-#form-container {
-    border: 2px solid #09796f; 
-    padding: 15px;          
-    margin: 15px;  
-    margin-left: 0px
-}
-
+        }
+        tbody tr:nth-child(odd) {
+            background-color: white;
+            height: 30px;
+        }
+        tbody tr:nth-child(even) {
+            background-color: lavender;
+            height: 30px;
+        } #hThreeEmp{
+            margin-left: 12px;
+        }
