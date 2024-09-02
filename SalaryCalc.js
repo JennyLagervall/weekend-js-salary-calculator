@@ -9,6 +9,7 @@ function grabValue(event){
     const titleInput = document.getElementById('title-input').value;
     const salaryInput = Number(document.getElementById('salary-input').value);
     
+
     monthlySalary.push(salaryInput);
 
     let salSum = 0
@@ -17,8 +18,10 @@ function grabValue(event){
        salSum += monthlySalary[i];}
 
 
-       let monthSum1 = salSum/ months;
+       let monthSum0 = salSum + 75000;
+       let monthSum1 = monthSum0/ months;
        let monthSum = monthSum1.toFixed(2);
+    
 
 
     const tradd = document.getElementById("table-add");
@@ -31,58 +34,19 @@ function grabValue(event){
       <td>${lastNameInput}</td>
       <td>${idInput}</td>
       <td>${titleInput}</td>
-      <td>${salaryInput}</td> 
+      <td> $${salaryInput} </td> 
       <td><button onClick="deleteValue(event)">delete</button></td>
       `
 
     const pAdd = document.getElementById("hThree");
     const pData = document.createElement('p');
     pAdd.appendChild(pData);
-    pData.innerText = `Total Salary per Month: $ ${monthSum}`;
+    pData.innerText = `Total Salary per Month: $${monthSum}`;
 }
 
 
   
 
-
-
-    
-    
-
-
-
-
-    // const salaryObject = {
-    //    salary: salaryOutput,
-    // }
-    // monthlySalary.push(salaryObject);
-    // console.log('Updated monthlySalary:', monthlySalary);
-    
-    // }  
-    // const hThreeAdd = document.getElementById("hThree");
-    // const hThreeData = document.createElement('div');
-    // hThreeAdd.appendChild(hThreeData);
-    
-    // hThreeData.innerHTML = 
-    // `<p>${monthlySalary}</p>`
-
-//   let sum = 0
-//   for (let i =0; i < monthlySalary.length; i++);
-//   let sumOne = sum += monthlySalary[i];
-//   let monthlySum = sumOne / 12;
-//   monthlySum
-
-// }
- 
-
-    
-
-//     const footAppend = document.getElementById("table-add");
-//     const tdata = document.createElement('tr');
-//     tradd.appendChild(tdata);
-    
-//    tdata.innerHTML = 
-// }
 
 
 
