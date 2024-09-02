@@ -51,22 +51,27 @@ function salaryDisplay(){
 
        const pAdd = document.getElementById("hThreeTwo");
        pAdd.innerText = `$${monthSum}`
+
+       if (monthSum >= 20000){
+        pAdd.style.backgroundColor = "red";
+        pAdd.style.color = "black";
+       }
       
 
 }
 
 // If the total monthly cost exceeds $20,000, add a red background color to the total monthly cost.
-// add everyother color to table
-//add table footer
+
 
 
 function deleteValue(event){
     let sumsum= 0
     let months1 =12
     event.target.closest('tr').remove();
-    monthlySalary.pop();
-   
+
+    salaryDisplay();
 }
+   
 
 
 
